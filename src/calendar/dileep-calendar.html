@@ -1,0 +1,5 @@
+<ejs-calendar id=calendar [value]='value' [min]='minDate' [max]='maxDate' (renderDayCell)="addStyle($event)" (change)="showEventDetails($event)"></ejs-calendar>
+<input id="event" placeholder="Add Event" [hidden]="showEvent" [(ngModel)]="eventValue" (ngModelChange)="dataEntered()"/>
+<button [hidden]="hideBtn" (click)="Save()">Save</button>
+<div>Events</div>
+<div [innerHtml]="customEvent" [hidden]="showDiv"></div>
